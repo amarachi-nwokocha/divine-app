@@ -1,26 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Lato:wght@400;700;900&display=swap');
+
 @import "tailwindcss";
 
 :root {
+  /* 🎨 Brand Colors */
   --background: #ffffff;
   --foreground: #171717;
+
+  --green: #189086;
+  --darkgreen: #0A5F54;
+  --blue: #13304D;
+
+  /* ⚪ Neutrals & Backgrounds */
+  --background-light: #F8FAFC;
+  --background-dark: #0F172A;
+  --card-bg: #FFFFFF;
+  --border-color: #E2E8F0;
+
+  /* 🩶 Text */
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --text-light: #FFFFFF;
+  --text-highlight: #189086;
+
+  /* ✍️ Fonts */
+  --font-heading: 'Lato', sans-serif;
+  --font-body: 'Arimo', sans-serif;
+
+  /* 🔔 Feedback States */
+  --success: #16A34A;
+  --warning: #F59E0B;
+  --error: #DC2626;
 }
 
 @theme inline {
+  /* 🎨 Brand Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-green: var(--green);
+  --color-darkgreen: var(--darkgreen);
+  --color-blue: var(--blue);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* ⚪ Extended Palette */
+  --color-background-light: var(--background-light);
+  --color-background-dark: var(--background-dark);
+  --color-card: var(--card-bg);
+  --color-border: var(--border-color);
+
+  /* 🩶 Text */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-light: var(--text-light);
+  --color-text-highlight: var(--text-highlight);
+
+  /* 🔔 Feedback */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  /* ✍️ Fonts */
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-heading);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  color: var(--color-blue);
+}
+
+p, span, li, button {
+  color: var(--color-text-primary);
+}
+
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Arimo', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg) translateX(6px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(6px) rotate(-360deg); }
+}
+
+@keyframes spin-slow-reverse {
+  from { transform: rotate(360deg) translateX(-6px) rotate(360deg); }
+  to { transform: rotate(0deg) translateX(-6px) rotate(0deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 8s linear infinite;
 }

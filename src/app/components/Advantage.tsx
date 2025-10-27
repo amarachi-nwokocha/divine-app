@@ -1,92 +1,73 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
-const WhyChooseWaymor = () => {
+export default function WaymorAdvantage() {
+  const advantages = [
+    {
+      title: "Deep Partnership",
+      text: "At Waymor, we believe that true success comes from a deep partnership, not just a list of recommendations. We don't simply advise; we work alongside you to deliver real, measurable impact. We become an extension of your team, dedicated to achieving your goals.",
+    },
+    {
+      title: "Strategic & Financial Clarity",
+      text: "We specialize in bringing strategic and financial clarity to even the most complex challenges. Our approach helps you cut through the noise, providing a clear roadmap to navigate uncertainty and make confident decisions. We also focus on strengthening your organization's foundation by improving governance, risk, and controls, ensuring you have the lasting resilience needed to withstand future challenges.",
+    },
+    {
+      title: "Evidence-Driven Insight",
+      text: "Our work is always grounded in evidence and research. This ensures every strategy we propose is credible and built on a solid foundation of data, not just intuition. We also prioritize building internal capacity within your team. By sharing our knowledge and expertise, we empower you to drive sustainable outcomes long after our engagement is complete.",
+    },
+    {
+      title: "Sustainable Transformation",
+      text: "Ultimately, everything we do is guided by a commitment to trust, integrity, and creating long-term value. We're not just looking for a quick win; we're invested in your lasting success. We empower your teams through knowledge sharing and capacity development — enabling you to sustain growth and success long after our engagement.",
+    },
+  ];
+
   return (
-    <section className="bg-white text-gray-900 py-24 px-6 md:px-16 overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center"
-      >
-        {/* Left: Image or Illustration */}
-        <div className="relative">
-          <Image
-            src="/images/waymor-team.jpg"
-            alt="Waymor team collaborating"
-            width={600}
-            height={400}
-            className="rounded-3xl shadow-lg object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-transparent rounded-3xl"></div>
+    <motion.section
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-white py-24 px-6"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-5xl font-bold text-[#222] mb-6">
+            The Waymor Advantage
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            We don’t just advise — we collaborate. Every solution is designed to
+            create measurable impact, built on trust, evidence, and shared success.
+          </p>
         </div>
 
-        {/* Right: Text */}
-        <div className="space-y-6">
-          <motion.h2
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight"
-          >
-            The <span className="text-green-600">Waymor Advantage</span>
-          </motion.h2>
+        {/* Advantage Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {advantages.map((adv, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+              className="relative bg-[#f9f9f9] border border-gray-200 rounded-2xl shadow-sm p-8 overflow-hidden group hover:shadow-md transition-all duration-500"
+            >
+              {/* Gold Accent Bar */}
+              <div className="absolute left-0 top-0 h-full w-[5px] bg-[#C0A000] rounded-r-lg opacity-90 group-hover:w-[8px] transition-all duration-300" />
 
-          <motion.p
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="text-lg text-gray-700 leading-relaxed"
-          >
-            At Waymor, we believe that true success comes from a deep partnership, 
-            not just a list of recommendations. We don’t simply advise; we{" "}
-            <span className="font-semibold text-gray-900">
-              work alongside you to deliver real, measurable impact.
-            </span>
-          </motion.p>
-
-          <motion.ul
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            className="list-disc list-inside space-y-3 text-gray-700"
-          >
-            <li>
-              We bring <span className="font-medium">strategic and financial clarity</span> to complex challenges.
-            </li>
-            <li>
-              Our evidence-based approach provides a{" "}
-              <span className="font-medium">clear roadmap</span> through uncertainty.
-            </li>
-            <li>
-              We strengthen your foundation with{" "}
-              <span className="font-medium">governance, risk, and control improvements.</span>
-            </li>
-            <li>
-              We build your team’s internal capacity for{" "}
-              <span className="font-medium">sustainable, long-term success.</span>
-            </li>
-          </motion.ul>
-
-          <motion.p
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.6, duration: 0.7 }}
-            className="text-lg text-gray-700 leading-relaxed"
-          >
-            Everything we do is guided by{" "}
-            <span className="font-semibold text-gray-900">
-              trust, integrity, and lasting value.
-            </span>{" "}
-            We’re not just looking for a quick win — we’re invested in your success.
-          </motion.p>
+              {/* Content */}
+              <h3 className="text-xl font-semibold text-[#111] mb-3">
+                {adv.title}
+              </h3>
+              <p className="text-gray-700 leading-relaxed">{adv.text}</p>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
-};
-
-export default WhyChooseWaymor;
+}

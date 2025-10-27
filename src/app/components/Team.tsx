@@ -1,0 +1,114 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
+
+export default function LeadershipTeam() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const leaders = [
+    {
+      name: "Divine Anunobi",
+      title: "CEO & Director, Public Sector Finance & Policy",
+      image: "/man.avif",
+      bio: "Divine Anunobi is an accomplished executive with expertise spanning financial advisory, public sector reform, and development finance. Formerly at PwC and CHAI, he has advised national institutions and global agencies, driving evidence-based policy and fiscal reform.",
+    },
+    {
+      name: "Franklyn Ezumah",
+      title: "Executive Director, Operations & Finance",
+      image: "/man.avif",
+      bio: "Franklyn Ezumah combines deep experience in banking and global health consulting. From Access Bank to CHAI, he has led strategic programs and financial portfolios backed by Gavi and the Bill & Melinda Gates Foundation.",
+    },
+    {
+      name: "Sima Unogu",
+      title: "Executive Director, Advisory & Strategy",
+      image: "/person.avif",
+      bio: "Sima Unogu brings nearly a decade of experience in capital markets, corporate finance, and strategy advisory. With roles at PwC and CHAI, she has advised on vaccine financing and national budget strategy, recognized by the CFA Black Women Scholarship.",
+    },
+    {
+      name: "Chidinma Aguomba",
+      title: "Executive Director, Governance, Risk & Sustainability",
+      image: "/person.avif",
+      bio: "Chidinma Aguomba is a finance professional with expertise in tax, audit, and governance. Having worked with EY, PwC Nigeria, and PwC Canada, she holds ACCA and CPA qualifications and brings a deep understanding of financial systems and internal controls.",
+    },
+  ];
+
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="bg-white py-24 px-6"
+    >
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Header */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <h2 className="text-5xl font-bold text-[#222] mb-4">
+            The Minds Behind Waymor
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Meet the visionaries driving Waymor’s mission — combining expertise
+            in strategy, finance, and governance to create lasting impact.
+          </p>
+        </div>
+
+        {/* Team Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {leaders.map((leader, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              onClick={() =>
+                setActiveIndex(activeIndex === index ? null : index)
+              }
+              className="group cursor-pointer"
+            >
+              {/* Image */}
+              <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden shadow-md border-4 border-[#C0A000]/80 transition-transform duration-500 group-hover:scale-105">
+                <Image
+                  src={leader.image}
+                  alt={leader.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Name & Title */}
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-[#111]">
+                  {leader.name}
+                </h3>
+                <div className="w-12 h-1 bg-[#C0A000] mx-auto my-2 rounded-full"></div>
+                <p className="text-sm text-gray-600 font-medium px-2">
+                  {leader.title}
+                </p>
+              </div>
+
+              {/* Bio (hover or tap reveal) */}
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{
+                  opacity:
+                    activeIndex === index || typeof window === "undefined"
+                      ? 1
+                      : 0,
+                  height: activeIndex === index ? "auto" : 0,
+                }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="overflow-hidden mt-4"
+              >
+                <p className="text-gray-700 text-sm leading-relaxed px-4">
+                  {leader.bio}
+                </p>
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.section>
+  );
+}

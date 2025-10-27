@@ -27,7 +27,7 @@ export default function WaymorAdvantage() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="bg-white py-24 px-6"
+      className="bg-white py-24 px-6" id="approach"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}

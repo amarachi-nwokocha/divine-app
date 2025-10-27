@@ -39,7 +39,7 @@ export default function LeadershipTeam() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-white py-24 px-6"
+      className="bg-white py-24 px-6" id="team"
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}

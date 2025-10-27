@@ -64,13 +64,13 @@ export default function Services() {
 
   return (
     <motion.section
-      className="py-20 bg-white"
+      className="py-20 bg-white" id="services"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6" >
         <h2 className="text-4xl font-bold text-center mb-10 text-[#333]">Our Services</h2>
         <div
           className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"

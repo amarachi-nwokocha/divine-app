@@ -37,7 +37,7 @@ export default function MissionVisionValues() {
 
   return (
     <section
-      ref={ref}
+      ref={ref} id="mission"
       className="relative bg-gradient-to-b from-white via-gray-50 to-gray-100 py-24 px-6 md:px-16 text-gray-800"
     >
       {/* --- Header --- */}

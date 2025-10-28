@@ -71,7 +71,7 @@ export default function Services() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="max-w-7xl mx-auto px-6" >
-        <h2 className="text-4xl font-bold text-center mb-10 text-white">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center mb-10 !text-white">Our Services</h2>
         <div
           className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}

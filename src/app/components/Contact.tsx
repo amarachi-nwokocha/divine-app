@@ -17,7 +17,7 @@ export default function ContactSection() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-start">
           {/* Text & Button */}
           <div className="md:col-span-2 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-white font-heading mb-4">
+            <h2 className="text-3xl font-bold !text-white font-heading mb-4">
               Let’s Build Something Exceptional Together
             </h2>
             <p className="text-white mb-8 max-w-2xl font-body">
@@ -36,7 +36,7 @@ export default function ContactSection() {
           {/* Company Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-white mb-3">
+              <h3 className="text-2xl font-semibold !text-white mb-3">
                 Waymor Advisory Ltd
               </h3>
               <p className="text-white/70">

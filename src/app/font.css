@@ -1,0 +1,18 @@
+/* font.css */
+
+/* Global default font */
+:root {
+  --font-heading: var(--font-montserrat);
+  --font-body: var(--font-open-sans);
+
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* Use these classes where needed */
+.font-heading {
+  font-family: var(--font-heading), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
+}

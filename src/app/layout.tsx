@@ -1,34 +1,26 @@
-import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import './globals.css';
+import './font.css'; // 👈 Import your font setup here
+import { Montserrat, Open_Sans } from 'next/font/google';
 
-// 🪶 Load fonts from Google via Next.js
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
 });
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans',
 });
 
-export const metadata: Metadata = {
-  title: "Waymor Advisory",
-  description:
-    "Waymor Advisory is a financial advisory firm helping clients build sustainable financial growth and smart investment strategies.",
+export const metadata = {
+  title: 'Waymor Advisory',
+  description: 'Financial advisory and strategy consulting firm.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased bg-[--color-background] text-[--color-foreground]">
-        {children}
-      </body>
+    <html lang="en" className={`${montserrat.variable} ${openSans.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

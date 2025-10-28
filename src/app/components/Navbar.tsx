@@ -51,7 +51,7 @@ const Navbar = () => {
             <Link
               key={item.href}
               href={item.href}
-              className="relative text-xl font-[var(--font-serif)] text-[var(--color-darkgreen)] transition-all duration-300 ease-in-out hover:text-[var(--color-green)] hover:scale-105"
+              className="relative text-xl font-[var(--font-serif)] text-[#13304D] transition-all duration-300 ease-in-out hover:text-[var(--color-green)] hover:scale-105"
             >
               <span className="relative group">
                 {item.label}

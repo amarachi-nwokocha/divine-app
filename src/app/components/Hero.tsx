@@ -33,7 +33,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/hero-bg.jpg"
+          src="/bgImg.jpg"
           alt="Waymor Advisory"
           fill
           priority
@@ -50,21 +50,21 @@ const HeroSection = () => {
       >
         <motion.h2
           variants={fadeInLeft}
-          className="text-[#189086] font-[Lato] font-semibold text-lg md:text-xl tracking-widest uppercase mb-4"
+          className="text-[#189086] font-heading font-semibold text-lg md:text-xl tracking-widest uppercase mb-4"
         >
           Integrity. Insight. Impact.
         </motion.h2>
 
         <motion.h1
           variants={fadeInLeft}
-          className="text-4xl md:text-5xl lg:text-6xl font-[Lato] font-bold leading-tight mb-6 text-white"
+          className="text-4xl md:text-5xl lg:text-6xl font-[Lato] font-bold leading-tight mb-6 text-[#13304D]"
         >
           At a Glance
         </motion.h1>
 
         <motion.p
           variants={fadeInLeft}
-          className="max-w-xl text-white/90 text-base md:text-lg font-[Arimo] mb-10"
+          className="max-w-xl text-[#13304D] text-base md:text-lg font-[Arimo] mb-10"
         >
           Waymor Advisory Ltd is a dynamic consulting firm committed to helping organizations
           navigate complexity, achieve clarity, resilience, and growth. Guided by integrity,

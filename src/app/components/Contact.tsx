@@ -13,21 +13,21 @@ export default function ContactSection() {
   return (
     <>
       {/* Contact Section */}
-      <section className="bg-white text-black py-20 px-6 md:px-16" id="contact">
+      <section className="bg-[#1E293B] text-white py-20 px-6 md:px-16" id="contact">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 items-start">
           {/* Text & Button */}
           <div className="md:col-span-2 flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-[#8BC34A] mb-4">
+            <h2 className="text-3xl font-bold text-white font-heading mb-4">
               Let’s Build Something Exceptional Together
             </h2>
-            <p className="text-gray-700 mb-8 max-w-2xl">
+            <p className="text-white mb-8 max-w-2xl font-body">
               Whether you’re a government institution, development partner, or private
               enterprise, we’d love to discuss how Waymor can support your goals.
             </p>
 
             <button
               onClick={() => setIsOpen(true)}
-              className="inline-block bg-[#8BC34A] text-black font-semibold py-3 px-8 rounded-xl hover:opacity-90 transition-all duration-300"
+              className="inline-block bg-[#189086] text-white font-semibold py-3 px-8 rounded-xl hover:opacity-90 transition-all duration-300 w-60"
             >
               Contact Us
             </button>
@@ -36,46 +36,46 @@ export default function ContactSection() {
           {/* Company Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-[#C0A000] mb-3">
+              <h3 className="text-2xl font-semibold text-white mb-3">
                 Waymor Advisory Ltd
               </h3>
-              <p className="text-gray-700">
+              <p className="text-white/70">
                 2A Abdulkareem Adisa Close, Adamu Aliero Crescent,
                 <br /> Guzape, Abuja, Nigeria.
               </p>
             </div>
 
-            <div className="space-y-3 text-gray-700">
+            <div className="space-y-3 text-white/70">
               <p>
-                <span className="font-semibold">Phone:</span> +234-913-558-6376
+                <span className="font-semibold text-white/70">Phone:</span> +234-913-558-6376
               </p>
               <p>
-                <span className="font-semibold">Email:</span> info@waymoradvisory.com
+                <span className="font-semibold text-white/70">Email:</span> info@waymoradvisory.com
               </p>
-              <p>
-                <span className="font-semibold">Website:</span>{" "}
+              {/* <p>
+                <span className="font-semibold text-white/70">Website:</span>{" "}
                 <a
                   href="https://www.waymoradvisory.com"
                   className="text-[#8BC34A] hover:text-[#C0A000]"
                 >
                   www.waymoradvisory.com
-                </a>
-              </p>
+                </a> */}
+              {/* </p> */}
             </div>
 
             {/* Social Links */}
             <div>
-              <h4 className="text-xl font-semibold text-[#8BC34A] mb-4">
+              <h4 className="text-xl font-semibold text-[#189086] mb-4">
                 Follow Us
               </h4>
               <div className="flex items-center gap-5">
-                <a className="p-2 rounded-full border border-gray-300 hover:border-[#8BC34A] hover:text-[#8BC34A] transition-all">
+                <a className="p-2 rounded-full border border-gray-300 hover:border-[#189086] hover:text-[#189086] transition-all">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a className="p-2 rounded-full border border-gray-300 hover:border-[#8BC34A] hover:text-[#8BC34A] transition-all">
+                <a className="p-2 rounded-full border border-gray-300 hover:border-[#189086] hover:text-[#189086] transition-all">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a className="p-2 rounded-full border border-gray-300 hover:border-[#8BC34A] hover:text-[#8BC34A] transition-all">
+                <a className="p-2 rounded-full border border-gray-300 hover:border-[#189086] hover:text-[#189086] transition-all">
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>

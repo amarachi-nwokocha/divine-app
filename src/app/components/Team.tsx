@@ -44,10 +44,10 @@ export default function LeadershipTeam() {
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-16">
-          <h2 className="text-5xl font-bold text-[#222] mb-4">
+          <h2 className="text-5xl font-bold text-[#1E293B] mb-4">
             The Minds Behind Waymor
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-[#1E293B] leading-relaxed">
             Meet the visionaries driving Waymor’s mission — combining expertise
             in strategy, finance, and governance to create lasting impact.
           </p>
@@ -68,7 +68,7 @@ export default function LeadershipTeam() {
               className="group cursor-pointer"
             >
               {/* Image */}
-              <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden shadow-md border-4 border-[#C0A000]/80 transition-transform duration-500 group-hover:scale-105">
+              <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden shadow-md border-4 border-[#800020] transition-transform duration-500 group-hover:scale-105">
                 <Image
                   src={leader.image}
                   alt={leader.name}
@@ -79,10 +79,10 @@ export default function LeadershipTeam() {
 
               {/* Name & Title */}
               <div className="mt-6">
-                <h3 className="text-xl font-semibold text-[#111]">
+                <h3 className="text-xl font-semibold text-[#1E293B]">
                   {leader.name}
                 </h3>
-                <div className="w-12 h-1 bg-[#C0A000] mx-auto my-2 rounded-full"></div>
+                <div className="w-12 h-1 bg-[#800020] mx-auto my-2 rounded-full"></div>
                 <p className="text-sm text-gray-600 font-medium px-2">
                   {leader.title}
                 </p>

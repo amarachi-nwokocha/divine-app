@@ -46,7 +46,7 @@ export default function MissionVisionValues() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+          className="text-4xl md:text-5xl font-bold text-[#1E293B] mb-4"
         >
           Mission & Vision
         </motion.h2>
@@ -64,8 +64,8 @@ export default function MissionVisionValues() {
           className="bg-white shadow-xl border border-gray-100 rounded-2xl p-8"
         >
           <div className="flex items-center gap-3 mb-4">
-            <Target className="w-6 h-6 text-[#8BC34A]" />
-            <h3 className="text-2xl font-semibold text-gray-900">Mission</h3>
+            <Target className="w-6 h-6 text-[#800020]" />
+            <h3 className="text-2xl font-semibold text-[#1E293B]">Mission</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
             To empower clients through dynamic, insight-driven solutions —
@@ -82,8 +82,8 @@ export default function MissionVisionValues() {
           className="bg-white shadow-xl border border-gray-100 rounded-2xl p-8"
         >
           <div className="flex items-center gap-3 mb-4">
-            <Lightbulb className="w-6 h-6 text-[#C0A000]" />
-            <h3 className="text-2xl font-semibold text-gray-900">Vision</h3>
+            <Lightbulb className="w-6 h-6 text-[#800020]" />
+            <h3 className="text-2xl font-semibold text-[#1E293B]">Vision</h3>
           </div>
           <p className="text-gray-700 leading-relaxed">
             To be the trusted thought partner for organizations navigating
@@ -101,7 +101,7 @@ export default function MissionVisionValues() {
         {/* Animated growth line */}
         <motion.div
           style={{ height: lineHeight }}
-          className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 w-1 bg-[#8BC34A] origin-top rounded-full"
+          className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 w-1 bg-[#189086] origin-top rounded-full"
         />
 
         <div className="space-y-24">
@@ -120,7 +120,7 @@ export default function MissionVisionValues() {
               } items-start`}
             >
               {/* Node */}
-              <div className="absolute left-[14px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-[#8BC34A] rounded-full z-10 shadow-md" />
+              <div className="absolute left-[14px] md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-white border-4 border-[#189086] rounded-full z-10 shadow-md" />
 
               {/* Card */}
               <div

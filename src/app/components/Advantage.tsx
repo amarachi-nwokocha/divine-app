@@ -32,7 +32,7 @@ export default function WaymorAdvantage() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-5xl font-bold text-[#222] mb-6">
+          <h2 className="text-5xl font-bold text-[#189086] mb-6">
             The Waymor Advantage
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">
@@ -57,13 +57,13 @@ export default function WaymorAdvantage() {
               className="relative bg-[#f9f9f9] border border-gray-200 rounded-2xl shadow-sm p-8 overflow-hidden group hover:shadow-md transition-all duration-500"
             >
               {/* Gold Accent Bar */}
-              <div className="absolute left-0 top-0 h-full w-[5px] bg-[#C0A000] rounded-r-lg opacity-90 group-hover:w-[8px] transition-all duration-300" />
+              <div className="absolute left-0 top-0 h-full w-[5px] bg-[#189086] rounded-r-lg opacity-90 group-hover:w-[8px] transition-all duration-300" />
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-[#111] mb-3">
+              <h3 className="text-xl font-semibold text-[#1E293B] mb-3">
                 {adv.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed">{adv.text}</p>
+              <p className="text-[#1E293B] leading-relaxed">{adv.text}</p>
             </motion.div>
           ))}
         </div>

@@ -7,7 +7,7 @@ const services = [
   {
     id: 1,
     title: "Advisory & Strategy",
-    icon: <Briefcase className="w-8 h-8 text-[#8BC34A]" />,
+    icon: <Briefcase className="w-8 h-8 text-[#189086]" />,
     description:
       "Our Advisory & Strategy division supports organizations in navigating complexity and unlocking growth.",
     points: [
@@ -20,7 +20,7 @@ const services = [
   {
     id: 2,
     title: "Governance, Risk & Sustainability",
-    icon: <Shield className="w-8 h-8 text-[#8BC34A]" />,
+    icon: <Shield className="w-8 h-8 text-[#189086]" />,
     description:
       "We help organizations establish sound governance frameworks and embed sustainability principles.",
     points: [
@@ -33,7 +33,7 @@ const services = [
   {
     id: 3,
     title: "Public Sector Finance & Policy",
-    icon: <Landmark className="w-8 h-8 text-[#8BC34A]" />,
+    icon: <Landmark className="w-8 h-8 text-[#189086]" />,
     description:
       "We partner with governments and development institutions to design evidence-based policies.",
     points: [
@@ -46,7 +46,7 @@ const services = [
   {
     id: 4,
     title: "Capacity Development & Transformation",
-    icon: <Users className="w-8 h-8 text-[#8BC34A]" />,
+    icon: <Users className="w-8 h-8 text-[#189086]" />,
     description:
       "We help organizations strengthen their people, systems, and culture for lasting impact.",
     points: [
@@ -64,14 +64,14 @@ export default function Services() {
 
   return (
     <motion.section
-      className="py-20 bg-white" id="services"
+      className="py-20 bg-[#1E293B]" id="services"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="max-w-7xl mx-auto px-6" >
-        <h2 className="text-4xl font-bold text-center mb-10 text-[#333]">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center mb-10 text-white">Our Services</h2>
         <div
           className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -97,7 +97,7 @@ export default function Services() {
                   </motion.div>
 
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-[#222]">{service.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-[#1E293B]">{service.title}</h3>
 
                     <AnimatePresence mode="wait">
                       {isExpanded && (

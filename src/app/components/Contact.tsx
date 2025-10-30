@@ -141,7 +141,7 @@ export default function ContactSection() {
 
             {/* Left Side */}
             <div className="bg-[#13304D] rounded-2xl p-8 text-white flex flex-col justify-center">
-              <img src="/logo.png" alt="Waymor Advisory" className="w-28 mb-6" />
+              <img src="/logo.jpg" alt="Waymor Advisory" className="w-28 mb-6" />
               <h3 className="text-2xl font-bold mb-4">
                 Schedule a Strategy Call
               </h3>

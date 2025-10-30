@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Briefcase, Shield, Landmark, Users } from "lucide-react";
+import { Briefcase, Shield, Landmark, Users, ChevronDown } from "lucide-react";
 
 const services = [
   {
@@ -59,77 +59,77 @@ const services = [
   },
 ];
 
-export default function Services() {
-  const [expanded, setExpanded] = useState<number | null>(null);
+export default function ServiceCards() {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
   return (
     <motion.section
-      className="py-20 bg-[#1E293B]" id="services"
+      id="services"
+      className="bg-[#1E293B] py-20 px-6"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="max-w-7xl mx-auto px-6" >
-        <h2 className="text-4xl font-bold text-center mb-10 !text-white">Our Services</h2>
-        <div
-          className="flex gap-6 overflow-x-auto scrollbar-hide pb-4"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {services.map((service) => {
-            const isExpanded = expanded === service.id;
+      {/* Centered Header */}
+      <h1 className="text-center font-bold !text-white text-4xl mb-10">
+        Our Services
+      </h1>
 
-            return (
-              <motion.div
-                key={service.id}
-                layout
-                onClick={() => setExpanded(isExpanded ? null : service.id)}
-                className={`relative flex-shrink-0 cursor-pointer rounded-2xl p-6 border border-gray-200 shadow-sm transition-all duration-500 ease-in-out
-                  ${isExpanded ? "bg-[#f8f8f8] w-[600px]" : "bg-white w-[380px]"}`}
-              >
-                <div className="flex items-start gap-4">
-                  <motion.div
-                    initial={{ rotate: 0 }}
-                    animate={{ rotate: isExpanded ? 360 : 0 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    {service.icon}
-                  </motion.div>
+      {/* Cards */}
+      <div className="flex flex-wrap justify-center gap-8">
+        {services.map((service) => {
+          const isExpanded = expandedCard === service.id;
 
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2 text-[#1E293B]">{service.title}</h3>
-
-                    <AnimatePresence mode="wait">
-                      {isExpanded && (
-                        <motion.div
-                          key="content"
-                          initial={{ opacity: 0, x: 10 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -10 }}
-                          transition={{ duration: 0.3 }}
-                          className="text-sm text-gray-700 space-y-2"
-                        >
-                          <p>{service.description}</p>
-                          <ul className="list-disc pl-5 space-y-1">
-                            {service.points.map((point, idx) => (
-                              <li key={idx}>{point}</li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
+          return (
+            <motion.div
+              key={service.id}
+              layout
+              onClick={() =>
+                setExpandedCard(isExpanded ? null : service.id)
+              }
+              className={`relative bg-white border border-[#189086]/20 rounded-2xl p-4 cursor-pointer w-[380px] md:w-[480px] transition-all duration-500 ease-in-out shadow-lg ${
+                isExpanded ? "h-auto" : "h-[120px]"
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  {service.icon}
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {service.title}
+                  </h3>
                 </div>
-              </motion.div>
-            );
-          })}
-        </div>
+                <motion.div
+                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown className="text-[#189086] w-5 h-5" />
+                </motion.div>
+              </div>
+
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.div
+                    key="content"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="mt-4 text-gray-700 text-md leading-relaxed"
+                  >
+                    <p>{service.description}</p>
+                    <ul className="list-disc pl-5 mt-3 space-y-1">
+                      {service.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          );
+        })}
       </div>
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </motion.section>
   );
 }

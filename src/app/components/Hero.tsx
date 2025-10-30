@@ -26,27 +26,29 @@ const HeroSection = () => {
   };
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center justify-start overflow-hidden"
-    >
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/bgImg.jpg"
-          alt="Waymor Advisory"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
+ <section
+  id="hero"
+  className="relative w-full min-h-screen flex items-center overflow-hidden"
+>
+  {/* Background Image (always full screen width) */}
+  <div className="absolute inset-0">
+    <Image
+      src="/bgImg.jpg"
+      alt="Waymor Advisory"
+      fill
+      priority
+      className="object-cover"
+    />
+  </div>
 
-      {/* Hero Content */}
+  {/* Inner container (centers the hero text and aligns with navbar) */}
+  <div className="relative z-10 w-full">
+    <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex items-center">
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 w-full md:w-2/3 lg:w-1/2 px-6 md:px-12 lg:px-20 text-left text-white"
+        className="w-full md:w-2/3 lg:w-1/2 text-left"
       >
         <motion.h2
           variants={fadeInLeft}
@@ -80,10 +82,12 @@ const HeroSection = () => {
           >
             Schedule a Strategy Call
           </Link>
-
         </motion.div>
       </motion.div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 };
 

@@ -39,8 +39,8 @@ const Navbar = () => {
           <Image
             src="/logo5.png"
             alt="Waymor Logo"
-            width={140}
-            height={20}
+            width={220}
+            height={60}
             className="object-contain"
           />
         </Link>

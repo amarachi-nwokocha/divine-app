@@ -39,7 +39,7 @@ const Navbar = () => {
           <Image
             src="/logo5.png"
             alt="Waymor Logo"
-            width={220}
+            width={190}
             height={60}
             className="object-contain"
           />

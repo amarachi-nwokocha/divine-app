@@ -36,14 +36,15 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <Image
-            src="/logo5.png"
-            alt="Waymor Logo"
-            width={190}
-            height={60}
-            className="object-contain"
-          />
-        </Link>
+  <Image
+    src="/logo5.png"
+    alt="Waymor Logo"
+    width={190}
+    height={60}
+    className="object-contain w-[120px] h-[40px] md:w-[190px] md:h-[60px]"
+  />
+</Link>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-10">
